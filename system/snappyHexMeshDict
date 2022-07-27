@@ -55,6 +55,11 @@ geometry
         type triSurfaceMesh;
         file "pipe1.stl";
     }
+    restante
+    {
+        type triSurfaceMesh;
+        file "restante.stl";
+    }
     pipe2
     {
         type triSurfaceMesh;
@@ -113,27 +118,32 @@ castellatedMeshControls
     (
         {
             file "inlet.eMesh";
-            level 4;
+            level 3;
         }
 	{
             file "outlet.eMesh";
-            level 4;
+            level 3;
         }
 	{
             file "atmosphere.eMesh";
-            level 4;
+            level 3;
         }
 	{
             file "concreteWall.eMesh";
-            level 4;
+            level 3;
         }
 	{
             file "pipe1.eMesh";
-            level 4;
+            level 3;
         }
+        {
+            file "restante.eMesh";
+            level 3;
+        }
+
 	{
             file "pipe2.eMesh";
-            level 4;
+            level 3;
         }
     );
 
@@ -153,32 +163,37 @@ castellatedMeshControls
 	inlet
         {
             // Surface-wise min and max refinement level
-            level (4 4);
+            level (3 3);
         }
 		outlet
         {
             // Surface-wise min and max refinement level
-            level (4 4);
+            level (3 3);
         }
 		atmosphere
         {
             // Surface-wise min and max refinement level
-            level (4 4);
+            level (3 3);
         }
 		concreteWall
         {
             // Surface-wise min and max refinement level
-            level (4 4);
+            level (3 3);
         }
 		pipe1
         {
             // Surface-wise min and max refinement level
-            level (4 4);
+            level (3 3);
+        }
+	        restante
+        {
+            // Surface-wise min and max refinement level
+            level (3 3);
         }
 		pipe2
         {
             // Surface-wise min and max refinement level
-            level (4 4);
+            level (3 3);
         }
     }
 
@@ -277,7 +292,7 @@ addLayersControls
     {
         "alcantarillado_.*"
         {
-            nSurfaceLayers 1;
+            nSurfaceLayers 0;
         }
     }
 
